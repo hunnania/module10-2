@@ -20,3 +20,13 @@ saat saya mengirimkan message dari client lainnya.
 
 Pada file server.rs, kita juga perlu mengganti port websocket menjadi 8080 agar message dari client dapat di-broadcast. 
 Port tersebut didefinisikan di function main dan disimpan pada variabel `listener`
+
+### Menambahkan informasi IP pada client
+#### Client 1
+![img_5.png](img_5.png)
+
+#### Client 2
+![img_6.png](img_6.png)
+
+Saya mengganti isi teks yang akan di-broadcast pada file server.rs menjadi `bcast_tx.send(format!("{addr} : {text}"))?;`
+ untuk memberikan informasi IP asal message tersebut dikirimkan pada client.
