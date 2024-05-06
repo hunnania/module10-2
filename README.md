@@ -14,3 +14,9 @@ Untuk menjalankannya, saya menjalankan perintah `cargo run --bin server` untuk m
 menjalankan perintah `cargo run --bin client` pada 3 terminal yang berbeda untuk menjalankan 3 client. Ketika saya 
 mengirimkan sebuah message dari client 1, message tersebut akan di-broadcat oleh server ke client lainnya, begitu juga 
 saat saya mengirimkan message dari client lainnya.
+
+### Mengganti port menjadi 8080
+![img_4.png](img_4.png)
+
+Pada file server.rs, kita juga perlu mengganti port websocket menjadi 8080 agar message dari client dapat di-broadcast. 
+Port tersebut didefinisikan di function main dan disimpan pada variabel `listener`
